@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import React from "react";
+import "./App.css";
+import NewComp from "./Components/NewComp";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+
+  styles ={
+    fontStyle: "bold",
+    color: "Green"
+  };
+  render(){
+    return(
+      <div className = "App">
+        <h3 style= {this.styles}>Welcome to the Skilln</h3>
+        <NewComp/>
+      </div>
+    );
+  }
 }
-
 export default App;
